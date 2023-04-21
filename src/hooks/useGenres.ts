@@ -1,4 +1,5 @@
 import useData from "./useData";
+import genres from "../data/genres";
 
 export interface Genre {
   id: number;
@@ -11,7 +12,8 @@ export interface Genre {
 //   results: Genre[];
 // }
 
-const useGenres = () => useData<Genre>("/genres");
+// const useGenres = () => useData<Genre>("/genres");
+const useGenres = () => ({ data: genres, isLoading: false, error: null });
 
 //   const [genres, setGenres] = useState<Genre[]>([]);
 //   const [error, setError] = useState("");
